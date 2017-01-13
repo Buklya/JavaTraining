@@ -1,11 +1,13 @@
-package ua.trubin.loganalyzer.entity;
+package ua.lnikolenko.loganalyzer.entity;
 
 import java.time.*;
 
-enum HttpMethod{GET, POST}
-
 public class LogToken {
     public LocalDateTime time;
-    public HttpMethod method;
-    String message;
+    public String method;
+    public String message;
+
+    public String toString(){
+        return "<time>" + time.toString() + "<method>" + method + "<message>" + message;
+    }
 }
